@@ -1,0 +1,79 @@
+#center-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: red;
+    font-size: 50px;
+    transition: transform 600ms ease-in opacity 600ms ease-out;
+}
+.text-change{
+    animation: scaleText 1s linear;
+    background-color: purple;
+}
+@keyframes scaleText {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#center-text:hover{
+    transform: scale(1.5,1.5);
+}
+
+#center-text.Active{
+    background-color: black;
+    transform: translate(-50%,-50%) rotate(360deg) scale(1.8, 1.8);
+}
+
+#body{
+    width: 100%;
+    height: 80vh;
+}
+  
+#plus{
+    position: absolute;
+    font-weight: bold;
+    right: 20px;
+    bottom: 20px;
+    font-size: 30px;
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 600ms ease-in-out transform 600ms ease;
+}
+#plus:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+    animation: rotate-button 1s linear 4;
+}
+@keyframes rotate-button {
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#minus{
+    position: absolute;
+    font-weight: bold;
+    right: 5px;
+    bottom: 5pxpx;
+    font-size: 30px;
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* code Energy flutter  channel React to do */
