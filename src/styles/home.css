@@ -1,4 +1,4 @@
-#center-text{
+#center-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -6,40 +6,44 @@
     font-size: 50px;
     transition: transform 600ms ease-in opacity 600ms ease-out;
 }
-.text-change{
+
+.text-change {
     animation: scaleText 1s linear;
     background-color: purple;
 }
+
 @keyframes scaleText {
-    0%{
+    0% {
         transform: scale(1);
         opacity: 1;
     }
-    50%{
+
+    50% {
         transform: scale(1.5);
         opacity: 0.5;
     }
-    100%{
+
+    100% {
         transform: scale(1);
         opacity: 1;
     }
 }
 
-#center-text:hover{
-    transform: scale(1.5,1.5);
+#center-text:hover {
+    transform: scale(1.5, 1.5);
 }
 
-#center-text.Active{
+#center-text.Active {
     background-color: black;
-    transform: translate(-50%,-50%) rotate(360deg) scale(1.8, 1.8);
+    transform: translate(-50%, -50%) rotate(360deg) scale(1.8, 1.8);
 }
 
-#body{
+#body {
     width: 100%;
     height: 80vh;
 }
-  
-#plus{
+
+#plus {
     position: absolute;
     font-weight: bold;
     right: 20px;
@@ -51,20 +55,23 @@
     cursor: pointer;
     transition: box-shadow 600ms ease-in-out transform 600ms ease;
 }
-#plus:hover{
+
+#plus:hover {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
     animation: rotate-button 1s linear 4;
 }
+
 @keyframes rotate-button {
-    50%{
+    50% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
 
-#minus{
+#minus {
     position: absolute;
     font-weight: bold;
     right: 5px;

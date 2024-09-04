@@ -7,19 +7,20 @@
 .App {
   text-align: center;
 } */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 #nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   padding: 10px 20px;
-  border: 2px solid #000; 
-  background-color: #fff; 
+  border: 2px solid #000;
+  background-color: #fff;
   padding: 0px 10px;
 }
 
@@ -38,10 +39,12 @@
   align-items: center;
 
 }
-#menus p{
+
+#menus p {
   color: blue;
   padding: 0px 10px;
 }
+
 /* Descendant selector
 #menus p {
   margin: 0;

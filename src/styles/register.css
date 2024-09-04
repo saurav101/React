@@ -1,43 +1,47 @@
-#register-box{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 550px;
-        padding: 20px;
-        border: 1px solid red;
-        border-radius: 20px;
-        background-color: bisque;
-        padding-left: 40px;
-        box-shadow: 0px 0px 40px 10px violet;
+#register-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    border: 1px solid red;
+    border-radius: 20px;
+    background-color: bisque;
+    padding-left: 40px;
+    box-shadow: 0px 0px 40px 10px violet;
 }
-#title{
-    font-size: 30px;
+
+#title {
+    font-size: 35px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-#re{
-    border-bottom: 2px solid rgb(255, 0, 208) ;
-    
+#re {
+    border-bottom: 2px solid rgb(255, 0, 208);
+
 }
 
-.row-field{
+.row-field {
     display: flex;
     gap: 5vw;
+    margin-left: 30px;
     margin-bottom: 2vh;
     align-items: center;
-}
-.gender label {
-    font-weight: bold;
-    margin-right: 10px;
+    padding: 5px;
 }
 
-.gender input{
+.gender label {
+    font-weight: bold;
+    margin-left: 35px;
+}
+
+.gender input {
     position: relative;
     margin-left: 1.5vw;
 }
-.gender input[type="radio"]{
+
+.gender input[type="radio"] {
     accent-color: purple;
 }
 
@@ -45,8 +49,8 @@
     accent-color: grey;
 }
 
-#submit{
-padding: 8px;
+#submit-btn {
+    padding: 8px;
     margin: 60px 20px 40px 30px;
     border-radius: 10px;
     cursor: pointer;
@@ -54,6 +58,6 @@ padding: 8px;
     background-color: skyblue;
     border-color: rgb(44, 105, 106);
     font-weight: bolder;
-    box-shadow: 0px 0px 10px 10px lightcyan;    
-    
+    box-shadow: 0px 0px 10px 10px lightcyan;
+
 }

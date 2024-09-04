@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Navbar from "../components/navbar";
 import "../styles/login.css";
 import { Link } from "react-router-dom";
+import CustomFormField from "../components/custom_form_field";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -21,42 +21,35 @@ const Login = () => {
     }
   };
 
-  const handleEmail = (e) => {
+  const handleOnEmailChange = (e) => {
     setEmail(e.target.value);
   };
-  const handlePassword = (e) => {
+  const handleOnPasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
   return (
-    <div id="container">
-      <Navbar title={"Login page"}></Navbar>
-      <div id="login">
-        <form id="container" onSubmit={handleSubmit}>
-          <label for="email">
-            Email:
-            <br />
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email here"
-            onChange={handleEmail}
-            required
-          />
-          <br />
-          <br />
-          <label for="password">Password:</label>
-          <br />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            onChange={handlePassword}
-            required
-          />
-          <input type="submit" value="Login" id="submit" />
+    <form onSubmit={handleSubmit}>
+      <div id="container">
+        <CustomFormField
+          label="Email"
+          placeholder="Enter your email"
+          type="email"
+          value={email}
+          cName="email"
+          onChange={handleOnEmailChange}
+        />
+
+        <CustomFormField
+          label="Password"
+          placeholder="Enter your password"
+          type="password"
+          value={password}
+          cName="password"
+          onChange={handleOnPasswordChange}
+        />
+        <div>
+          <input type="submit" value="Login" id="login-button" />
           <p
             style={{
               textAlign: "center",
@@ -65,11 +58,11 @@ const Login = () => {
               marginTop: "15px",
             }}
           >
-            Already have an account? <Link to ='/register'>Sign Up</Link>
+            Already have an account? <Link to="/register">Sign Up</Link>
           </p>
-        </form>
+        </div>
       </div>
-    </div>
+    </form>
   );
 };
 
