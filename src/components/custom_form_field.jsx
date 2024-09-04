@@ -6,7 +6,6 @@ export default function CustomFormField({
   type,
   value,
   cName,
-  onChange,
 }) {
   return (
     <div id="form-field">
@@ -21,7 +20,6 @@ export default function CustomFormField({
         value={value}
         placeholder={placeholder}
         type={type}
-        onChange={onChange}
       />
     </div>
   );
