@@ -3,12 +3,19 @@ import "../styles/register.css";
 import CustomFormField from "../components/custom_form_field";
 
 const Register = () => {
-  const fullNameRef = useRef("");
+  const [fullName, setFullName] = useState("");
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [confirmPwd, setConfirmPwd] = useState("");
+  const [gender, setGender] = useState("");
 
   const handleRegister = (e) => {
     e.preventDefault();
-    var fullName = fullNameRef.current;
-    console.log("fullname =", fullName);
+    console.log(
+      `fullname =${fullName}, userName = ${userName}, email = ${email}, phone =${phone}, gender = ${gender}`
+    );
   };
 
   return (
@@ -23,13 +30,14 @@ const Register = () => {
             placeholder="Enter your full Name"
             type="text"
             cName="fullname"
-            ref={fullNameRef}
+            onChange={(e) => setFullName(e.target.value)}
           />
           <CustomFormField
             label="Username"
             placeholder="Enter your Username"
             type="text"
             cName="username"
+            onChange={(e) => setUserName(e.target.value)}
           />
         </div>
         <div className="row-field">
@@ -38,11 +46,13 @@ const Register = () => {
             placeholder="Enter your Email"
             type="email"
             cName="email"
+            onChange={(e) => setEmail(e.target.value)}
           />
           <CustomFormField
             label="Phone Number"
             placeholder="Enter your Phone"
             type="number"
+            onChange={(e) => setPhone(e.target.value)}
             cName="Phone"
           />
         </div>
@@ -51,12 +61,14 @@ const Register = () => {
             label="Password"
             placeholder="Enter your password"
             type="password"
+            onChange={(e) => setPassword(e.target.value)}
             cName="password"
           />
           <CustomFormField
             label="Confirm Password"
             placeholder=" Confirm Your Password"
             type="password"
+            onChange={(e) => setConfirmPwd(e.target.value)}
             cName="confirm"
           />
         </div>
@@ -89,7 +101,7 @@ const Register = () => {
           Prefer not to say
         </div>
 
-        <input type="submit" value="SignUp" id="submit" />
+        <input type="submit" value="SignUp" id="submitBtn" />
       </div>
     </form>
   );
