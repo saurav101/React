@@ -8,9 +8,10 @@
         border: 1px solid red;
         border-radius: 20px;
         background-color: bisque;
-        padding-left: 40px;
+        padding-left: 60px;
         box-shadow: 0px 0px 40px 10px violet;
 }
+
 #title{
     font-size: 30px;
     font-weight: bold;
@@ -39,21 +40,21 @@
 }
 .gender input[type="radio"]{
     accent-color: purple;
+    height: 0.7rem;
 }
 
 .gender input[type="radio"]:hover {
-    accent-color: grey;
+    accent-color: green;
 }
 
-#submit{
-padding: 8px;
-    margin: 60px 20px 40px 30px;
+#submitBtn{
+    padding: 8px;
+    margin: 20px 0px;
     border-radius: 10px;
     cursor: pointer;
     width: 400px;
     background-color: skyblue;
     border-color: rgb(44, 105, 106);
     font-weight: bolder;
-    box-shadow: 0px 0px 10px 10px lightcyan;    
-    
+    box-shadow: 0px 0px 10px 10px lightcyan;       
 }

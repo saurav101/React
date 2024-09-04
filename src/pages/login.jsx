@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "../components/navbar";
 import "../styles/login.css";
 import { Link } from "react-router-dom";
+import CustomFormField from "../components/custom_form_field";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -33,29 +34,13 @@ const Login = () => {
       <Navbar title={"Login page"}></Navbar>
       <div id="login">
         <form id="container" onSubmit={handleSubmit}>
-          <label for="email">
-            Email:
-            <br />
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email here"
-            onChange={handleEmail}
-            required
-          />
+          <div id="email">
+      <CustomFormField label="Email" placeholder="Enter your email" type="email" value={email} cName="email" onChange={handleEmail}/> </div>
           <br />
           <br />
-          <label for="password">Password:</label>
-          <br />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            onChange={handlePassword}
-            required
-          />
+      <div className="password">
+      <CustomFormField label ="Password" placeholder="Enter your password" type="password" value={password} cName="password" onChange={handlePassword}/>
+      </div>
           <input type="submit" value="Login" id="submit" />
           <p
             style={{
